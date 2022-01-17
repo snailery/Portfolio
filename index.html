@@ -8,7 +8,7 @@
     <meta name="author" content="Fabrx">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>CPB - Portfolio</title>
-    <link href="assets/images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="assets/images/custom/snail.png" rel="shortcut icon" type="image/x-icon">
     <link href="assets/vendor/simplebar/dist/simplebar.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="assets/css/fabrx-styles.min.css" rel="stylesheet" type="text/css" media="all">
     <link href="assets/css/owl.carousel.min.css" rel="stylesheet" type="text/css" media="all">
@@ -36,13 +36,19 @@
             line-height: 1.75;
         }
 
-        h4, h5, h6,
+        h4,
+        h5,
+        h6,
         .nav-item a {
             font-family: "JetBrains Mono", monospace;
         }
 
         h6 {
             font-size: medium;
+        }
+
+        .custom-highlight {
+            background: linear-gradient(to top, #f8e196 50%, transparent 50%);
         }
 
         a:active,
@@ -54,11 +60,10 @@
             color: #e06666 !important;
         }
 
-        .nav-item .active::before, .nav-item a:hover::before {
+        .nav-item .active::before,
+        .nav-item a:hover::before {
             content: ">>\00a0";
         }
-
-        
     </style>
 </head>
 
@@ -68,7 +73,8 @@
             <div class="row py-0 py-md-5 justify-content-center">
                 <div class="col-lg-2">
                     <div style="padding: 0rem 3rem 1rem 0rem;">
-                        <img src="assets/images/snail.png" alt="12px" class="rounded-12">
+                        <a class="fabrx-animation rounded-12" href="#"><img src="assets/images/custom/snail.png"
+                                alt="12px"></a>
                     </div>
                     <ul class="nav nav-tabs nav-tabs-line nav-tags-stack p-0 flex-column font-size-16 nav-tabs-children sticky-md-top"
                         id="sidenav">
@@ -78,26 +84,26 @@
                         <li class="nav-item">
                             <a class="nav-link" href="projects.html">Projects</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
                     </ul>
                 </div>
                 <div class="col-lg-8">
                     <div class="container p-0 mb-4">
                         <div class="card card-body bg-white p-5 border border-gray-200">
-                            <h4>Hi there! I'm Adara Rei.</h4>
+                            <h4>Hi there! I'm <span class="custom-highlight">Adara Rei</span>.</h4>
                             <i class="pt-2 pb-4 text-black-50">Developer, Illustrator & Heavy Sleeper</i>
-                            <p style="color: #212121;">I'm a graduate of Nanyang Polytechnic's Diploma in Business & Financial Technology
+                            <p style="color: #212121;">I'm a graduate of Nanyang Polytechnic's Diploma in Business &
+                                Financial Technology
                                 currently looking for a job. If you happen to be in need of someone financially and
                                 technologically savvy alongside an eye for aesthetic, don't hesitate to reach out!
                             </p>
                             <p style="color: #212121;">
-                                In fact, my resume is right <a href="Adara-Dimatulac_Resume.pdf"><i>here.</i></a> *wink wink*
+                                In fact, my resume is right <a href="Adara-Dimatulac_Resume.pdf"><i>here.</i></a> *wink
+                                wink*
                             </p>
                         </div>
                     </div>
-                    <div class="row">
+                    
+                    <!-- <div class="row">
                         <div class="col-lg-6">
                             <div class="card card-body bg-white p-5 ml-1 border border-gray-200">
                                 <h6>Language Profiency</h6>
@@ -108,7 +114,7 @@
                                 <h6>Framework Proficiency</h6>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
