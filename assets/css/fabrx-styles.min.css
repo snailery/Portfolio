@@ -11335,6 +11335,30 @@ a:hover {
 .bg-trans-90 {
  background-color:rgba(13,110,253,.9)!important
 }
+.bg-custom-trans-8 {
+ background-color: rgba(224, 102, 102, 0.08) !important;
+}
+.bg-custom-trans-16 {
+ background-color: rgba(224, 102, 102, 0.16) !important;
+}
+.bg-custom-trans-24 {
+ background-color: rgba(224, 102, 102, 0.24) !important;
+}
+.bg-custom-trans-32 {
+ background-color: rgba(224, 102, 102, 0.32) !important;
+}
+.bg-custom-trans-48 {
+ background-color: rgba(224, 102, 102, 0.48) !important;
+}
+.bg-custom-trans-64 {
+ background-color: rgba(224, 102, 102, 0.64) !important;
+}
+.bg-custom-trans-80 {
+ background-color: rgba(224, 102, 102, 0.8) !important;
+}
+.bg-custom-trans-90 {
+ background-color: rgba(224, 102, 102, 0.9) !important;
+}
 .bg-secondary-trans-8 {
  background-color:rgba(18,18,18,.08)!important
 }
