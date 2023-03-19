@@ -1,0 +1,111 @@
+@import url("master.css");
+
+/* ===============================
+
+THE CODE ON THIS STYLESHEET APPLIES TO ONLY THE ABOUT PAGE
+
+
+========= LAYOUT DETAILS ========== */
+
+.wrapper {
+  margin: auto;
+  padding: 100px 40px;
+  display: grid;
+  max-width: 850px;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "profile card"
+    "socials card";
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+/* for REALLY small screens */
+@media only screen and (max-width: 550px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+      "socials profile"
+      "card card";
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
+  }
+}
+
+.profile-pic {
+  grid-area: profile;
+  margin-left: auto;
+  position: relative;
+}
+
+.profile-pic img {
+  position: absolute;
+  top: 13%;
+  left: 13%;
+}
+
+.about {
+  grid-area: card;
+  padding: 40px;
+}
+
+.socials {
+  grid-area: socials;
+  align-self: center;
+}
+
+.socials span {
+  display: block;
+}
+
+/*
+
+========= AESTHETICS SECTION ===========
+because layout itself is such a pain, i separated it from what actually makes the website pretty.
+
+*/
+
+i {
+  font-size: 12px;
+}
+
+.about {
+  background-color: #FFF;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.05);
+  border-radius: 5px;
+}
+
+.profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 4px solid #5588e0;
+  vertical-align: middle;
+}
+
+.profile-pic img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 1px solid #FFF;
+  object-fit: cover;
+}
+
+.socials {
+  text-align: right;
+  font-family: "Roboto", Helvetica, sans-serif;
+  font-variant: small-caps;
+  font-weight: 500;
+  font-size: 1.4em;
+  line-height: 1.5em;
+}
+
+.socials a {
+  color: #392F5A;
+}
+
+#ig, .fa-instagram {
+  color: #5588e0;
+}

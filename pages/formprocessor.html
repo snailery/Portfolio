@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css2/formprocessor.css">
+    <title>CIs your data correct?</title>
+  </head>
+
+  <body>
+    <nav> </nav>
+<!-- ============ EXTRACT RAW DATA =============== -->
+    <script type="text/javascript">
+      var formData = location.search;
+      formData = formData.substring(1, formData.length);
+
+      while (formData.indexOf("+") != -1) {
+        formData = formData.replace("+", " ");
+      }
+
+      formData = unescape(formData);
+      var formArray = formData.split("&");
+    </script>
+
+    <script type="text/javascript">
+      function goHome() {
+        alert("Form Submitted. Thank you!");
+        open("../webdevproject.html","_self");
+      }
+    </script>
+
+    <main>
+      <div class="title">
+        <h1><span>Are these details correct?</span></h1>
+      </div>
+
+      <div class="wrapper">
+        <table>
+          <tr>
+            <th>Name</th>
+            <td><span id="name" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Email</th>
+            <td><span  id="email" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Commission Type</th>
+            <td><span id="tier" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Reference Link</th>
+            <td><span id="ref" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Description of your Commission</th>
+            <td><span id="desc" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Card Type</th>
+            <td><span id="card-type"class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Card Number</th>
+            <td><span id="card-no" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>CVV</th>
+            <td><span id="cvv"class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Expiry Date</th>
+            <td><span id="expiry" class="blank"></span></td>
+          </tr>
+          <tr>
+            <th>Billing Address</th>
+            <td><span id="billing-add" class="blank"></span></td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="button-wrapper">
+        <div class="button" onclick="window.open('order.html','_self')" style="cursor:pointer;"> Return</div>
+        <div class="button" onclick="goHome()" style="cursor:pointer;"> Continue</div>
+      </div>
+    </main>
+
+<!-- ============ DISPLAY DATA =============== -->
+    <script type="text/javascript">
+      for (var i=0; i < formArray.length; ++i) {
+        para=formArray[i].split("=");
+        switch (para[0]) {
+      		case "name":
+      				  dd=new Date(para[1]);
+      				  document.getElementById("name").innerHTML=para[1];
+      				  break;
+          case "email": document.getElementById("email").innerHTML=para[1];
+      					break;
+      		case "tier":
+      					document.getElementById("tier").innerHTML=para[1];
+      					break;
+      		case "ref":
+                document.getElementById("ref").innerHTML=para[1];
+      					break;
+      		case "desc":
+      					document.getElementById("desc").innerHTML=para[1];
+      					break;
+      		case "card-type":
+      					document.getElementById("card-type").innerHTML=para[1];
+      					break;
+      		case "card-no":
+      					document.getElementById("card-no").innerHTML=para[1];
+      					break;
+      		case "cvv":
+      					document.getElementById("cvv").innerHTML=para[1];
+      					break;
+      		case "expiry":
+      					document.getElementById("expiry").innerHTML=para[1];
+      					break;
+      		case "billing-add":
+      					document.getElementById("billing-add").innerHTML=para[1];
+      					break;
+          }
+      }
+    </script>
+
+    <footer>
+        <a href="../projects.html">Click here to return to Adara's Portfolio.</a>
+    </footer>
+
+  </body>
+</html>

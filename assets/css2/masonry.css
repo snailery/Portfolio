@@ -1,0 +1,48 @@
+html {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.masonry-wrapper {
+  padding: 60px 24px;
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.masonry {
+  columns: 2;
+  column-gap: 20px;
+}
+
+.masonry-item {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .masonry {
+    columns: 3;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .masonry {
+    columns: 4;
+  }
+}
+
+.masonry-item, .masonry-content {
+  border-radius: 5px;
+  overflow: visible;
+}
+
+.masonry-item:hover {
+  transform: scale(1.02, 1.02);
+  transition: transform .1s ease-in-out;
+}

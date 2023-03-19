@@ -1,0 +1,100 @@
+@import url("master.css");
+
+/* ===============================
+
+THE CODE ON THIS STYLESHEET APPLIES TO ONLY THE COMMISSIONS PAGE
+
+=============================== */
+
+.wrapper {
+  margin: auto;
+  padding: 40px;
+  display: grid;
+  max-width: 960px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "commissions commissions commissions"
+    "tier1 tier2 tier3";
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+}
+
+/* it starts looking ugly from 860px and lower */
+@media only screen and (max-width: 860px) {
+  .wrapper {
+    grid-template-columns: minmax(100px, 380px);
+    grid-template-rows: auto repeat(3, 1fr);
+    grid-template-areas:
+      "commissions"
+      "tier1"
+      "tier2"
+      "tier3";
+    grid-row-gap: 30px;
+  }
+}
+
+.wrapper h1 {
+  grid-area: commissions;
+  justify-self: center;
+}
+
+.wrapper img {
+  object-fit: cover;
+  object-position: 0 0;
+  width: 100%;
+  max-height: 50%;
+  top: 0;
+  border-radius: 5px 5px 0 0;
+}
+
+.tier1 {
+  grid-area: tier1;
+}
+
+.tier2 {
+  grid-area: tier2;
+}
+
+.tier3 {
+  grid-area: tier3;
+}
+
+.comm-desc {
+  padding: 10px 25px 30px 25px;
+}
+
+/*
+
+========= AESTHETICS SECTION ===========
+because layout itself is such a pain, i separated it from what actually makes the website pretty.
+
+*/
+
+.wrapper h1 {
+  background: linear-gradient(to top, #ffd45f 50%, transparent 50%);
+}
+
+.tier1, .tier2, .tier3 {
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.05);
+  transition: 0.1s ease-out;
+}
+
+.tier1:hover, .tier2:hover, .tier3:hover {
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.comm-desc ul li {
+  list-style: none;
+  position: relative;
+  padding-left: 20px;
+}
+
+.comm-desc ul li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+}

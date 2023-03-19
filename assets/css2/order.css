@@ -1,0 +1,154 @@
+@import url("master.css");
+
+/* ===============================
+
+THE CODE ON THIS STYLESHEET APPLIES TO ONLY THE ORDER PAGE
+
+
+========= LAYOUT DETAILS ========== */
+
+nav {
+  visibility: hidden;
+}
+
+main {
+  justify-content: center;
+}
+
+form {
+  display: grid;
+  margin: 30px;
+  grid-template-columns: minmax(100px, 600px);
+  grid-template-rows: auto;
+}
+
+form a {
+  margin-left: auto;
+}
+
+h2 {
+  padding-bottom: 2px;
+}
+
+.title {
+  text-align: center;
+  padding: 24px 24px 50px 24px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto;
+  padding: 30px;
+  margin: 30px 0;
+}
+
+.nospace {
+  margin: 10px 0;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-row-gap: 15px;
+  padding-top: 30px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+label[for=desc], label[for=billing-add] {
+  align-self: flex-start;
+}
+
+input, textarea {
+  width: calc(100% - 24px);
+}
+
+input[name=cvv], input[name=expiry] {
+  width: 30%;
+}
+
+.button {
+  padding: 30px 0 70px 0;
+  margin: auto;
+  width: 30%;
+}
+
+
+
+/* for REALLY small screens */
+@media only screen and (max-width: 550px) {
+  section {
+    padding: 0;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-row-gap: 0px;
+  }
+
+  section label {
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+}
+
+
+/*
+
+========= AESTHETICS SECTION ===========
+because layout itself is such a pain, i separated it from what actually makes the website pretty.
+
+*/
+
+/* overwrite hover animation */
+
+#return:hover{
+  color: #392F5A;
+}
+
+#return:hover::after {
+  width: 0;
+}
+
+form p {
+  text-align: center;
+}
+
+.card {
+  background-color: #FFF;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgb(0, 0, 0, 0.05);
+}
+
+label {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+
+input, select, textarea {
+  background: none;
+  border: 2px solid #eee;
+  border-radius: 7px;
+  padding: 10px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 14px;
+  color: #392F5A;
+  outline: none;
+}
+
+input:focus, select:focus, textarea:focus {
+  border: 2px #9DD9D2 solid;
+}
+
+input::placeholder select::placeholder, textarea::placeholder {
+  font-family: "Open Sans", sans-serif;
+  color: #ababab;
+}
+
+input[type=submit] {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #392F5A;
+  background-color: #9DD9D2;
+  border: 2px solid #9DD9D2;
+}

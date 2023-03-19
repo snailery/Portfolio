@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../assets/css2/order.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <title> </title>
+  </head>
+
+  <body>
+
+    <main>
+      <form action="formprocessor.html" method="get" target="_self">
+        <div class="title">
+          <h1><span>Send us your order?</span></h1> <br>
+          <p>This form does not collect any data for us. Despite that however, please refrain from actually entering factual data!</p>
+        </div>
+
+        <a href="javascript:window.open('','_self').close();" id="return">Return to Commissions Page</a>
+
+        <div class="contact card nospace">
+          <h2>Contact Information</h2>
+          <hr>
+          <section>
+            <label for="name">name</label>
+            <input type="text" name="name" value="" placeholder="John Smith" required>
+            <label for="email">email</label>
+            <input type="email" name="email" value="" placeholder="email@gmail.com" required>
+          </section>
+        </div>
+
+        <div class="comm-details card">
+          <h2>Commission Details</h2>
+          <hr>
+          <section>
+            <label for="tier">tier type</label>
+            <select class="tier" name="tier" required>
+              <option value="Sticker Pack">Sticker Pack</option>
+              <option value="Character Illustration">Character Illustration</option>
+              <option value="Full Background">Full Background</option>
+            </select>
+            <label for="ref">references</label>
+            <input type="link" name="ref" value="" placeholder="https://www.pinterest.com" required>
+            <label for="desc">description</label>
+            <textarea name="desc" rows="8" cols="80" placeholder="Please make your description as detailed possible." required></textarea>
+          </section>
+        </div>
+
+        <div class="payment card nospace">
+          <h2>Payment Details</h2>
+          <hr>
+          <section>
+            <label for="card-type">card type</label>
+            <select class="card-type" name="card-type" required>
+              <option value="Visa">Visa</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="American Express">American Express</option>
+            </select>
+            <label for="card-no">card number</label>
+            <input type="text" name="card-no" value="" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}-[0-9]{4}" placeholder="0000-0000-0000-0000" required>
+            <label for="cvv">cvv</label>
+            <input type="text" name="cvv" value="" placeholder="999" pattern="[0-9]{3}" required>
+            <label for="expiry">expiry date</label>
+            <input type="date" name="expiry" value="" required>
+            <label for="billing-add">billing address</label>
+            <textarea name="billing-add" rows="8" cols="80" required></textarea>
+          </section>
+        </div>
+
+        <p>By submitting this form, you are agreeing to these non-existent <br> <a href="#">Terms of Service</a>.</p>
+
+        <div class="button" >
+          <input type="submit" name="submit" value="Submit" style="cursor:pointer;">
+        </div>
+
+      </form>
+    </main>
+
+    <footer>
+        <a href="../projects.html">Click here to return to Adara's Portfolio.</a>
+    </footer>
+
+  </body>
+</html>
